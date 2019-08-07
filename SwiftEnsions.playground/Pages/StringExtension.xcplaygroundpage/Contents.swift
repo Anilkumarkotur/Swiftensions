@@ -13,7 +13,15 @@ extension String {
         }
         return flagString
     }
+    
+    func url() -> URL? {
+        return URL(string: self) ??  nil
+    }
 }
 
-
+//MARK: emojiFlag Usage
 "ID".emojiFlag()
+
+//MARK: url Usage
+"www.google.com".url()
+
