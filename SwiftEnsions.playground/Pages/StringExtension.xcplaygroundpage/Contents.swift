@@ -17,6 +17,10 @@ extension String {
     func url() -> URL? {
         return URL(string: self) ??  nil
     }
+    
+    func removeWhiteSpace() -> String {
+        return self.replacingOccurrences(of: " ", with: "")
+    }
 }
 
 //MARK: emojiFlag Usage
@@ -24,4 +28,7 @@ extension String {
 
 //MARK: url Usage
 "www.google.com".url()
+
+//MARK: Remove the White space 
+"a ve n g e r s ".removeWhiteSpace()
 
