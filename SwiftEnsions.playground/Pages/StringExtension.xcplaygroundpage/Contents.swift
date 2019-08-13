@@ -26,6 +26,10 @@ extension String {
     func removeWhiteSpace() -> String {
         return self.replacingOccurrences(of: " ", with: "")
     }
+    
+    func commaTrimmed() -> String {
+        return self.components(separatedBy: CharacterSet(charactersIn: ",")).joined(separator: "")
+    }
 }
 
 //MARK: emojiFlag Usage
